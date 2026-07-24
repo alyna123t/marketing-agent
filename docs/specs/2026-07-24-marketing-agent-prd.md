@@ -97,10 +97,17 @@ Update skills from real performance.
 
 Location: `skills/marketing/`. Every skill follows the same **contract** (see `skills/marketing/_SKILL_TEMPLATE.md`): Trigger · Inputs · Process checklist · Output schema · Quality gates · Failure handling · Escalation. The contract is what stops "agent creativity" from breaking ops consistency.
 
+**Design principle: thin skills, rich knowledge, human review.** Across every reference operator (Andy Lo's brand brain, the Isenberg/Gaskell course, Okara), the leverage is *not* more skills — it's a few thin skills reading rich shared-knowledge files, with a human review step. Prefer a knowledge file + a checklist step inside an existing skill over a new standalone skill. See [`docs/specs/2026-07-24-skill-set-review.md`](2026-07-24-skill-set-review.md) for the source-by-source rationale behind this list.
+
 **Foundation**
-- `brand-voice-guard` — enforce tone, banned phrases, confidence calibration, "don't overclaim" + required caveats.
+- `brand-voice-guard` — enforce tone, banned phrases, confidence calibration, "don't overclaim" + required caveats. Reads `shared-knowledge/marketing/brand-voice.md`.
 - `claim-evidence-linter` — every assertion must map to a data-drop line, a shipped PR, or a public source. Blocks publish if unmapped claims exist.
-- `audience-angle-selector` — one audience per post (trader / builder / founder / partner). Rejects mixed-audience drafts.
+- *(Folded)* **Audience angle** is no longer a standalone skill. It is a required "pick exactly one audience" step inside every `format-*` skill, backed by `shared-knowledge/marketing/audiences.md`. Rationale: one audience per post is a per-draft checklist item, not a job that needs its own runtime.
+
+**Knowledge (not skills — read by the skills above and below)**
+- `shared-knowledge/marketing/brand-voice.md` — voice, banned phrases, required caveats, personality cues.
+- `shared-knowledge/marketing/platform-guidelines.md` — per-platform specs, structure, and tone (X, LinkedIn, …). Every `format-*` and `repurpose-*` skill reads this so formatting stays consistent without each skill re-encoding it.
+- `shared-knowledge/marketing/audiences.md` — the four audiences (trader / builder / founder / partner) and how to write for each.
 
 **Sense / Data**
 - `weekly-signal-intake` — intel + support + product events → ranked opportunities.
@@ -116,7 +123,8 @@ Location: `skills/marketing/`. Every skill follows the same **contract** (see `s
 **Ship / Measure / Learn**
 - `publish-tier-router` — score draft risk, route to Tier 1/2/3.
 - `utm-tagging-and-ledger` — apply tag schema, log post metadata.
-- `monthly-content-retro` — compare format performance, patch skills, open Paperclip updates.
+- `weekly-performance-coach` — **new.** Reads the attribution ledger and tells the operator what to double down on and what to drop this week ("do more of this, do less of that"). Recommender, not a pruner. Added because two reference operators (Jacob Bank's weekly AI coach, Claire Vo's analytics agent "Howie") run exactly this loop *weekly* — the monthly retro alone is 4× too slow to steer. Depends on Measure being richer than raw tagged links (see §7 and open question #3).
+- `monthly-content-retro` — the deep pass: compare format performance, prune losers, promote winners into `patterns/`, patch skills, open Paperclip updates.
 
 ---
 
@@ -129,6 +137,8 @@ The marketing analog of the engineers' shape-check gate: *which content is safe 
 | **1 — auto** | Purely factual updates; no forward-looking, partner, legal, or financial claims | Publishes automatically *(post-MVP; draft-only during weeks 1–6)* | — |
 | **2 — review** | Receipts interpretations, tactical conclusions | **Alyna** | < 24h turnaround |
 | **3 — approval** | Brand strategy shifts, controversial comparisons, partnership/price/legal-sensitive narratives | **Adrian** | As available |
+
+**Review adds voice, it doesn't only gate risk.** Every reference operator says the durable human edge is personality — Claire Vo's "rizz is the moat," Jacob Bank recording his own videos because they express *his* personality. `brand-voice-guard` enforces guardrails (tone, banned phrases); it cannot supply charisma. So the Tier-2 human review is explicitly the step where a person *adds* the point of view, the aside, the stopping-power — not just checks for danger. A draft that clears every gate but reads like a changelog has failed. (See the Make appendix.)
 
 **Hard stops.**
 - No evidence map → cannot publish.
@@ -144,8 +154,8 @@ Start with **one skill, one format, validation from day one.** The weekly receip
 
 | Weeks | Add | Ship mode |
 | --- | --- | --- |
-| **1–2** | `weekly-data-drop-builder` + `format-receipts-post` | Tier-2 review only, draft-only. Prove one full lap: sense → data → receipts draft → review → tagged link → wiki writeup. |
-| **3–4** | `repurpose-x-thread`, `repurpose-linkedin` | Enable Tier-1 *category* (still draft-only). |
+| **1–2** | `weekly-data-drop-builder` + `format-receipts-post` (+ `platform-guidelines.md`, `audiences.md`) | Tier-2 review only, draft-only. Prove one full lap: sense → data → receipts draft → review → tagged link → wiki writeup. |
+| **3–4** | `repurpose-x-thread`, `repurpose-linkedin`, `weekly-performance-coach` | Enable Tier-1 *category* (still draft-only). Coach starts steering once ≥2 weeks of attribution exist. |
 | **5–6** | `format-build-guide` | Run first `monthly-content-retro`; patch skills. |
 
 **Rule:** never add a second agent to add a format. Every new format is a new skill file. The moment the instinct is "spin up a video agent / an X agent," that is the platform-per-agent trap. One agent loading skills until we genuinely cross a security boundary or five distinct functions.
@@ -160,6 +170,8 @@ Start with **one skill, one format, validation from day one.** The weekly receip
 - **Ideal:** signup → active-trader conversion.
 - **Operational:** Tier-2 SLA adherence; % of drafts published vs. stalled; time-to-publish per tier.
 - **Learn-layer:** month-over-month, are promoted formats converting better than pruned ones?
+
+**Measurement is now load-bearing, not just a scoreboard.** `weekly-performance-coach` can only recommend if per-unit attribution is recorded weekly. Tagged links are the floor; if attribution stays thin, the coach degrades to noise and the whole Learn loop has nothing to steer on. Treat richer attribution (per-post → signup, ideally → active) as a Phase-1 requirement, not a nice-to-have. This is the same concern as open question #3.
 
 ---
 
@@ -176,7 +188,9 @@ Start with **one skill, one format, validation from day one.** The weekly receip
 
 Section 10 of the how-it-works doc asked specifically for instincts on *what makes content good*. Captured here as design input to the Make skills; to be expanded.
 
-- **Are the three formats right?** Build guide / Receipts / Fascination — which is load-bearing, which to cut or defer, what's missing (e.g. a "we were wrong about X" teardown, a founder-POV format). *[To fill in.]*
+The clippings sharpen this: two operators independently name **personality / founder voice as the un-automatable moat** ("rizz is the moat"; recording your own videos to express your personality). That reframes the whole appendix — the agent's job is to get a draft 90% of the way on *facts and structure*; the human review is where the last 10% of *voice* goes in. The questions below are how we define that 10%.
+
+- **Are the three formats right?** Build guide / Receipts / Fascination — which is load-bearing, which to cut or defer, what's missing (e.g. a "we were wrong about X" teardown, a founder-POV format — the latter now explicitly supported by the personality finding). *[To fill in.]*
 - **What makes a receipts post *good* vs. a changelog?** The shareable version vs. the version that reads like release notes. *[To fill in — best captured as a before/after on one real data drop.]*
-- **What can an agent make well vs. what always needs a human?** The Make-layer shape-check. *[To fill in.]*
-- **What makes you personally stop scrolling?** *[To fill in.]*
+- **What can an agent make well vs. what always needs a human?** The Make-layer shape-check. Working answer from the clippings: agent owns facts + structure + platform formatting; human owns voice + point of view. *[To refine.]*
+- **What makes you personally stop scrolling?** *[To fill in — this is the definition of the human 10%.]*

@@ -9,11 +9,13 @@ opportunity issue exists (or the weekly cadence fires). One receipts post per dr
 
 ## Inputs
 - `shared-knowledge/marketing/data-drops/YYYY-WW.md` (+ JSON sidecar).
-- Brand guardrails via `brand-voice-guard`.
+- Brand guardrails via `brand-voice-guard` (reads `shared-knowledge/marketing/brand-voice.md`).
+- `shared-knowledge/marketing/audiences.md` (for the one-audience step).
+- `shared-knowledge/marketing/platform-guidelines.md` (for platform-native formatting).
 - The opportunity issue for the week (audience + angle), if one exists.
 
 ## Process checklist
-1. **Pause — pick one audience** (trader / builder / founder / partner) before drafting.
+1. **Pause — pick one audience** (trader / builder / founder / partner) from `audiences.md` before drafting.
    If the angle is unclear, ask via the opportunity issue; do not guess and drift.
 2. Draft the post around three beats: **what happened / why / what changed next week.**
 3. Lead with the most credible, hardest-to-fake number from the drop — including a loss.
