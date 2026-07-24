@@ -119,6 +119,12 @@ Location: `skills/marketing/`. Every skill follows the same **contract** (see `s
 - `format-fascination-piece` — "we ran N agents with different strategies — here's what happened." Must include uncertainty + failure modes.
 - `repurpose-x-thread` — re-argue for X pacing (hook, proof beats, punchy cadence).
 - `repurpose-linkedin` — re-argue for LinkedIn narrative (context, insight, CTA).
+- `format-news-reframe` — real news + a plain-English translation ("Parlays, for prediction markets" — our best-performing post, made repeatable). Never a link-drop; the reframe is the post. Highest-reach pillar for a small account.
+- `engage-replies` — 3–5 sharp, receipt-backed replies/day under large accounts (Polymarket, Kalshi, CT traders). For a small account, replies borrow big audiences and outperform posting into the void. Draft-only, Tier 2 — replies carry more tone risk than posts.
+
+**Content mix & the worth-posting gate.** Posting follows a four-pillar weighted rotation (news-reframe ~40% / receipts ~25% / explainer ~25% / promo ~10%) defined in `shared-knowledge/marketing/content-calendar.md` — roughly 4:1 value-to-promo. The calendar is a **ceiling, not a quota**: no post ships just because it's Tuesday. Every draft must pass the worth-posting gate (something actually happened; a reader would send it to a friend; states its value in one line; isn't a repeat). An empty slot is a normal outcome and gets logged; the weekly coach tracks how often each pillar clears the gate. Silence beats filler — every mediocre post taxes the reach of the next good one.
+
+**Founder-variant rule.** Distribution accrues to people, not brand accounts (every reference operator agrees). The receipts skill drafts each post twice from the same evidence map: brand version + a founder-voiced variant for Adrian's account. Whether he uses it is his call per post (open question #5).
 
 **Ship / Measure / Learn**
 - `publish-tier-router` — score draft risk, route to Tier 1/2/3.
@@ -181,6 +187,7 @@ Start with **one skill, one format, validation from day one.** The weekly receip
 2. **Draft-only → live cutover** — what trigger moves us from human-paste to MCP publishing? (Proposal: after the loop runs clean for the full 6 weeks and draft→paste is the proven bottleneck.)
 3. **Canonical Learn-layer KPI** — minimum clicks + signups, or hold out for signup→active-trader conversion? If attribution is thin, the monthly retro has nothing to cut on.
 4. **Skill-patch ownership** — who owns the monthly skill patches: Alyna directly, or via Trinity ticketing?
+5. **Founder-account posting** — is Adrian willing to paste a founder-voiced variant of the weekly receipts post from his own account? Personal accounts reliably out-distribute brand accounts (Claire Vo, Jacob Bank both lean on this); the agent drafts both versions either way, so the cost is zero — but it's his name, so it's his call.
 
 ---
 
@@ -193,4 +200,4 @@ The clippings sharpen this: two operators independently name **personality / fou
 - **Are the three formats right?** Build guide / Receipts / Fascination — which is load-bearing, which to cut or defer, what's missing (e.g. a "we were wrong about X" teardown, a founder-POV format — the latter now explicitly supported by the personality finding). *[To fill in.]*
 - **What makes a receipts post *good* vs. a changelog?** The shareable version vs. the version that reads like release notes. *[To fill in — best captured as a before/after on one real data drop.]*
 - **What can an agent make well vs. what always needs a human?** The Make-layer shape-check. Working answer from the clippings: agent owns facts + structure + platform formatting; human owns voice + point of view. *[To refine.]*
-- **What makes you personally stop scrolling?** *[To fill in — this is the definition of the human 10%.]*
+- **What makes you personally stop scrolling?** First answer now lives in [`shared-knowledge/marketing/brand-voice.md`](../../shared-knowledge/marketing/brand-voice.md): outcome-led plain English over feature names, real numbers over hype, honesty as the hook ("you can still lose"), and the news-reframe pattern ("parlays, for prediction markets"). Built from our past posts vs. Elastics + hook research; refine from real performance.

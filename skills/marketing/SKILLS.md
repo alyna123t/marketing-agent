@@ -16,6 +16,8 @@ Phase 1 first (see PRD §6). Change rationale in
 | `weekly-performance-coach` | Measure/Learn | 2 (wk 3–4) | contract drafted |
 | `repurpose-x-thread` | Make | 2 (wk 3–4) | not written |
 | `repurpose-linkedin` | Make | 2 (wk 3–4) | not written |
+| `format-news-reframe` | Make | 2 (wk 3–4) | not written — repeatable version of our best post ("parlays for prediction markets"): real news + plain-English translation, never a link-drop |
+| `engage-replies` | Make/Ship | 2 (wk 3–4) | not written — 3–5 quality replies/day under big accounts; draft-only, Tier 2 (replies carry more tone risk than posts) |
 | `format-build-guide` | Make | 3 (wk 5–6) | not written |
 | `format-fascination-piece` | Make | later | not written |
 | `monthly-content-retro` | Learn | 3 | not written |
@@ -26,6 +28,7 @@ Phase 1 first (see PRD §6). Change rationale in
 | `shared-knowledge/marketing/brand-voice.md` | `brand-voice-guard` | drafted |
 | `shared-knowledge/marketing/platform-guidelines.md` | all `format-*` / `repurpose-*` | drafted |
 | `shared-knowledge/marketing/audiences.md` | all `format-*` | drafted |
+| `shared-knowledge/marketing/content-calendar.md` | `weekly-signal-intake`, `publish-tier-router` | drafted — 4-pillar rotation + the **worth-posting gate** (calendar is a ceiling, not a quota; no post ships without something real to say) |
 
 **Folded:** `audience-angle-selector` is no longer a standalone skill — it's a
 required "pick one audience" step inside each `format-*` skill, backed by

@@ -22,7 +22,12 @@ opportunity issue exists (or the weekly cadence fires). One receipts post per dr
 4. Build the **claim→evidence map**: every assertion maps to a data-drop line.
    Unmapped claim → cannot ship (`claim-evidence-linter`).
 5. Apply `brand-voice-guard`: tone, banned phrases, no overclaiming, required caveats.
-6. Emit the draft with its tier tag (see `publish-tier-router`; receipts default Tier 2).
+6. Run the **worth-posting gate** (`content-calendar.md`): if the week's data is thin
+   or the post says nothing the last drops didn't, log "no post — nothing cleared the
+   gate" and stop. Never pad a boring week into a post.
+7. Draft the **founder-voiced variant** from the same evidence map (first-person,
+   Adrian's account; his call whether to use it).
+8. Emit both drafts with the tier tag (see `publish-tier-router`; receipts default Tier 2).
 
 ## Output schema
 A Paperclip draft issue containing:
@@ -30,10 +35,12 @@ A Paperclip draft issue containing:
 Draft: receipts post — YYYY-WW
 Audience: <one>
 Tier: 2
-Body: <post text>
+Body (brand): <post text>
+Body (founder variant): <first-person version for Adrian's account>
 Claim→evidence map:
   - <claim> → data-drops/YYYY-WW.md:<line>
 UTM: <tagged link from utm-tagging-and-ledger>
+Gate: <passed | "no post — nothing cleared the gate" + reason>
 ```
 
 ## Quality gates
