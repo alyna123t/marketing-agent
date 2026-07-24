@@ -23,7 +23,7 @@ Phase 1 first (see PRD §6). Change rationale in
 ## Knowledge files (read by skills — not skills themselves)
 | File | Read by | Status |
 | --- | --- | --- |
-| `shared-knowledge/marketing/brand-voice.md` | `brand-voice-guard` | stub |
+| `shared-knowledge/marketing/brand-voice.md` | `brand-voice-guard` | drafted |
 | `shared-knowledge/marketing/platform-guidelines.md` | all `format-*` / `repurpose-*` | drafted |
 | `shared-knowledge/marketing/audiences.md` | all `format-*` | drafted |
 
