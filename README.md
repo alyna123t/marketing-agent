@@ -1,4 +1,4 @@
-# aeon-marketing
+# marketing-agent
 
 Working repo for Simmer's marketing agent. Laid out to the `agentcompanies/v1`
 shape so it lifts directly into `simmer-labs` when handed off.
@@ -11,7 +11,7 @@ skill library. Every new format is a new skill file, never a new agent.
 
 ```
 docs/specs/                     The PRD and future specs
-agents/aeon-marketing/          Agent config (identity, schedule, tool access)
+agents/marketing-agent/          Agent config (identity, schedule, tool access)
 skills/marketing/               The skill library (the real work)
   _SKILL_TEMPLATE.md            Contract every skill must follow
   weekly-data-drop-builder/     Phase 1

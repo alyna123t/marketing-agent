@@ -1,4 +1,4 @@
-# Agent: aeon-marketing
+# Agent: marketing-agent
 
 *Extends Aeon. Not a new runtime, not a new agent per channel.*
 

@@ -1,4 +1,4 @@
-# PRD — Aeon-Marketing
+# PRD — marketing-agent
 
 *Marketing agent for Simmer, built on the existing agent-company framework.*
 *Author: Alyna · Date: 2026-07-24 · Status: Draft for Adrian & Nick*
@@ -36,7 +36,7 @@
 
 | Decision | Choice |
 | --- | --- |
-| Agent | `aeon-marketing` (extends Aeon; not a new runtime) |
+| Agent | `marketing-agent` (extends Aeon; not a new runtime) |
 | Runtime | Claude Code on GitHub Actions, scheduled — same as Aeon today |
 | Coordination | **Paperclip only.** A content idea is an *issue*, not a chat. No agent-to-agent messaging. |
 | Knowledge | `shared-knowledge/marketing/` alongside `patterns/` and `intel/` |
