@@ -5,6 +5,11 @@ description: Use when a weekly Simmer data drop exists and it's time to turn rea
 
 # format-receipts-post
 
+> **Paused (Adrian, 2026-07-24 — community-feed-first pivot.)** Not in active use.
+> We're starting with an internal community feed (shiplog / tweet-digest /
+> feature-built formats, chosen by the team) before X. Kept intact for when
+> receipts content returns. See `docs/specs/2026-07-24-community-feed-pivot.md`.
+
 ## Overview
 
 Turn one weekly data drop into a receipts post: real results, losses included, written to stop the scroll. **The whole point is that only Simmer can write this** — aggregate PnL across many agents with the losses in. A receipts post that reads like a company changelog has failed, even if every fact is true.

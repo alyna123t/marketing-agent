@@ -7,7 +7,7 @@ Phase 1 first (see PRD §6). Change rationale in
 | Skill | Group | Phase | Status |
 | --- | --- | --- | --- |
 | `weekly-data-drop-builder` | Sense/Data | 1 | contract drafted |
-| `format-receipts-post` | Make | 1 | **built + tested** (frontmatter, hook-first recipe, worked example; RED/GREEN verified on 2 scenarios incl. a losing week) |
+| `format-receipts-post` | Make | 1 | **Paused** (Adrian, 2026-07-24 — community-feed-first pivot; was built + tested, kept intact) |
 | `brand-voice-guard` | Foundation | 1 | knowledge stub only |
 | `claim-evidence-linter` | Foundation | 1 | referenced, not written |
 | `weekly-signal-intake` | Sense/Data | 2 | not written |
