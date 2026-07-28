@@ -1,6 +1,7 @@
 # X-account audit — who's doing X well in our space
 
-*Author: Alyna · Captured: 2026-07-24 · Source: live X (logged-in), manual screenshots*
+*Author: Alyna · Captured: 2026-07-24 (round one, 8 accounts) and 2026-07-28
+(round two, +2: Aeon, PMX) · Source: live X (logged-in), manual screenshots*
 
 The same move we made studying Aeon's Agent Feed, one level wider and on X. Goal:
 a map of who's doing X well in our space, and our next set of format ideas,
@@ -15,14 +16,18 @@ before we start posting there ourselves. Brief:
 - **§3 What we'd borrow** — ranked patterns, each mapped to our three community
   formats (shiplog / tweet-digest / feature-built) or flagged as a new X idea.
 
-**All numbers are real, screenshotted on 2026-07-24.** Engagement is a moving
-snapshot (replies / reposts / likes / views as of capture). Screenshots live in
-[`assets/`](assets/) and are linked per account.
+**All numbers are real, screenshotted** — round one on 2026-07-24, round two on
+2026-07-28. Engagement is a moving snapshot (replies / reposts / likes / views as
+of capture). Screenshots live in [`assets/`](assets/) and are linked per account.
 
-**Coverage caveat:** this first pass covers **8 accounts** the operator picked
-live. The two seeds Adrian named — **Aeon (`@aeon_agent`)** and **pmxt** — are
-**not yet captured** (auth/collection ran out of runway; see §4). They're the
-first adds for round two.
+**Coverage:** **10 accounts.** Round one (2026-07-24) covered the 8 the operator
+picked live. Round two (2026-07-28) added the two seeds Adrian named — **Aeon**
+and **PMX** — which round one missed. Remaining gaps are in §4.
+
+**Handle notes for the two seeds.** Aeon on X is **`@aeonframework`**, not
+`@aeon_agent` — the latter is its Telegram "Agent Feed" group, which is the thing
+the community-feed pivot borrows its three formats from. "pmxt" resolves to
+**PMX (`@pmx_trade`)**.
 
 ---
 
@@ -38,6 +43,8 @@ first adds for round two.
 | **functionSPACE** | [@functionspaceHQ](https://x.com/functionspaceHQ) | Prediction-market builder | 3,610 | Direct peer (prediction-market building blocks). Product-led: gamified competitions + public leaderboards. Small but on-nose. |
 | **Bankr** | [@bankrbot](https://x.com/bankrbot) | AI-agent / bot builder | 113K | Automated high-volume account (755K posts). Ecosystem quote-tweet flywheel — amplify partners' data with your framing. |
 | **Lunar** | [@LunarResearcher](https://x.com/LunarResearcher) | KOL — AI engineer / prediction markets | 28.1K | Same playbook as Movez/Roan; transparent that content is sponsored. Video + timestamps + substack funnel. |
+| **Aeon** | [@aeonframework](https://x.com/aeonframework) | Agent framework (the feed we're copying) | 150.1K | The source of our three community formats. Runs a pure **ship-as-post** feed — every post is a shipped thing. Also our clearest *warning*: 150K followers, ~20–60 likes a post. |
+| **PMX** | [@pmx_trade](https://x.com/pmx_trade) | Prediction-market exchange (Solana) | 14.6K | Closest competitor-shaped peer. One repeatable move — QT someone's problem, answer "**PMX solves this**." Best engagement-per-follower in the set. |
 
 **The one pattern to notice up front:** Roan, Movez, and Lunar run the *same*
 content meta — "AI agents / self-improving loops / graph-engineering hedge funds,"
@@ -221,6 +228,96 @@ hook + video with timestamps + long-form funnel.**
 - **What we'd borrow:** **timestamped video chapters** (raises watch-time and saves)
   and the honesty of labelling sponsored content — on-brand for us.
 
+### Aeon — [@aeonframework](https://x.com/aeonframework) · 150.1K · Agent framework *(round two, captured 2026-07-28)*
+![profile](assets/aeon-profile.png)
+
+863 posts, 150.1K followers, **3 following**, joined Aug 2024. Bio: "The most
+autonomous agent framework ⭐ / **No approval loops. No babysitting. Configure once,
+forget forever.**" Links `aeon.fun`, ticker `$aeon`.
+
+**Read this one twice.** Aeon is where our three community formats came from (via
+its Telegram Agent Feed), so it's the closest thing we have to a template — *and*
+it's the sharpest cautionary number in the audit.
+
+- **What they post:** effectively one format — **ship-as-post**. Every post is a
+  thing that shipped: a dev kit, a model now supported, a blog article about new
+  scanners. No commentary, no market takes, no receipts.
+- **Cadence:** steady, a few per week (863 posts since Aug 2024 ≈ 1.2/day lifetime,
+  but the visible feed reads as a few per week).
+- **Top posts:**
+  - 📌 Pinned Jul 21 — "Integrating aeon agents to any product and workflow is now a
+    reality thanks to the ADK, the **Aeon Development Kit** 🛠" + a 3:55 walkthrough
+    video by [@0xNurstar](https://x.com/0xNurstar) — 7 / 10 / 64 / **7.4K**.
+    ![pin](assets/aeon-posts-adk-and-scanners.png)
+  - Jul 27 — "In our latest blog article we discussed about our three scheduled
+    scanners that can make both your agentic activities and other OS repos much
+    safer 👮" — carries a designed card, **"AN AGENT THAT SCANS ITSELF,"** whose
+    body text *is* the article abstract (vuln-scanner, skill-security-scan,
+    workflow-security-audit) — 3 / 4 / 17 / **2.1K**.
+    ![post](assets/aeon-posts-adk-and-scanners.png)
+  - Jul 25 — "**Claude Opus 5 is now live on aeon** ⭐ Get work done with the most
+    powerful model of Anthropic – and schedule skills now 👇" — QT of
+    [@claudeai](https://x.com/claudeai)'s Opus 5 launch — 5 / 3 / 31 / **5.8K**.
+    ![post](assets/aeon-post-opus5-live.png)
+- **The number that matters:** 150.1K followers, and posts land at **2.1K–7.4K views
+  and 17–64 likes** — roughly **1.4–5% of the follower count sees a post**. A large
+  follower number and a pure ship feed did *not* produce engagement. This is
+  functionSPACE's "product-only caps out" caution again, at 40× the following.
+- **What we'd borrow:** (1) the **model/news ride-along** — "X launched, it's live in
+  our product today" is a cheap, timely post that is simultaneously news-reframe and
+  promo, and it was their best-performing non-pinned post; (2) the **article card
+  that carries its own abstract** — the image does the work, the tweet is a pointer.
+  Directly applicable to feature-built.
+- **What we would NOT borrow:** the feed shape itself. If our shiplog is only "here
+  is what shipped," Aeon is the evidence it flatlines. The shiplog needs the receipts
+  layer (Roan) to have a reason to be read.
+
+### PMX — [@pmx_trade](https://x.com/pmx_trade) · 14.6K · Prediction-market exchange *(round two, captured 2026-07-28)*
+![profile](assets/pmx-profile.png)
+
+528 posts, 14.6K followers, 165 following, joined Dec 2024. Bio: "decentralized
+prediction markets on @solana," plus a Telegram group and a Polymarket TG bot
+(`polycule.trade`). **Followed by Lunar** — the KOL set and the builder set overlap.
+Banner tagline: "TOMORROW, TRADABLE."
+
+- **What they post:** almost entirely **positioning-by-contrast against Polymarket**,
+  delivered through one repeatable move: quote-tweet someone else's observation or
+  complaint, then answer in a single line — "**PMX solves this.**" Three of the five
+  posts captured use that exact phrase.
+- **Cadence:** every 2–4 days.
+- **Top posts:**
+  - Jul 21 — "**If you MM on prediction markets, dm us.** We've built an exchange that
+    allows u to keep all your spread, trade with 0 fees, and is decentralized on
+    @solana" — 2 / 4 / 27 / **3K**. An outreach ask posted *as content*.
+    ![post](assets/pmx-posts-tokenized-mm-propamm.png)
+  - Jul 17 — "PropAMMs will soon come to prediction market volume on @solana. The
+    infrastructure … just hasn't existed until now. **PMX solves this.**" QT of a
+    [@PineAnalytics](https://x.com/PineAnalytics) X Article ("Where Prop AMMs Are
+    Taking Solana") — 3 / 6 / 21 / **2.3K**.
+    ![post](assets/pmx-posts-tokenized-mm-propamm.png)
+  - Jul 24 — "The biggest problem with Polymarket is that being off chain makes it
+    impossible to build a smart contract on top of it… Tokenized PMs solve this. You
+    can build anything with an SPL token" — 1 / 3 / 22 / **1.5K**.
+    ![post](assets/pmx-posts-tokenized-mm-propamm.png)
+  - Jul 14 — "**PMX will payout more than Polymarket** in many different types of
+    markets. Market makers on Polymarket make the most … whenever markets are
+    volatile. No-one has brought this to retail MMs where anyone can profit off of
+    the volatility" — 2 / 3 / 25 / **1.7K**.
+    ![post](assets/pmx-posts-solves-this-payout.png)
+  - Jul 16 — "**PMX solves this**" QT of [@vibhu](https://x.com/vibhu) ("probably a
+    good spot to build a viral social app/game on @solana… less competition") —
+    3 / 3 / 15 / **2.1K**. ![post](assets/pmx-posts-solves-this-payout.png)
+- **The number that matters:** 14.6K followers producing **1.5K–3K views per post** —
+  **~10–20% of the follower count**, versus Aeon's 1.4–5% at 150K. Ten times fewer
+  followers, comparable absolute views. Small and engaged beats large and passive.
+- **What we'd borrow:** (1) the **"we solve this" QT** — a one-line reply to someone
+  else's stated problem is the cheapest repeatable post in the whole audit and it
+  travels on the original poster's audience; (2) **the direct ask as a post** ("if you
+  MM on prediction markets, dm us") — a small account can convert attention straight
+  into conversations. Honesty guardrail: PMX asserts "solves this" with **no evidence
+  attached**, which is exactly the move `claim-evidence-linter` exists to block. We
+  can run the shape, but our version carries the number.
+
 ---
 
 ## §3 — What we'd borrow (ranked, mapped to our formats)
@@ -264,22 +361,53 @@ a **new X format** for when we get there.
    Cup)* — a shareable standings graphic on a cycle. → engagement lever / promo;
    lower priority for a content feed.
 
-**Two cautions from the data:**
+*Added in round two:*
+
+10. **"We solve this" QT** *(PMX)* — quote-tweet someone else's stated problem and
+    answer in one line. The cheapest repeatable post in the audit, and it rides the
+    original poster's audience. A sharper, opinionated cousin of #8. → **tweet
+    digest**, and the highest-frequency **new X format** available to us on day one.
+    **Our version must carry the evidence PMX's doesn't** (`claim-evidence-linter`).
+
+11. **Model/news ride-along** *(Aeon: "Claude Opus 5 is now live on aeon")* — when
+    something big launches, post that it works in our product *today*. News-reframe
+    and promo in one, timely, and cheap. → **shiplog** and **tweet digest**.
+
+12. **Article card that carries its own abstract** *(Aeon: "AN AGENT THAT SCANS
+    ITSELF")* — the image holds the argument; the tweet is just a pointer. A cheaper
+    cousin of #5 when the artifact is prose rather than a chart. → **feature-built**.
+
+13. **The direct ask as a post** *(PMX: "If you MM on prediction markets, dm us")* —
+    a small account can convert attention into conversations directly. → occasional
+    lever, not a pillar.
+
+**Three cautions from the data:**
 - Small accounts posting **product-only** into a small following cap out fast
   (functionSPACE: tens of likes). Value first, promo ~4:1 — the worth-posting gate
   still holds.
+- **A pure ship feed does not carry itself, at any size.** Aeon has 150.1K followers
+  and lands 2.1K–7.4K views (1.4–5% of following); PMX has 14.6K and lands 1.5K–3K
+  (10–20%). Followers are not reach. This is the single most important finding for
+  the **shiplog**: "here's what shipped" needs a reason to be read — the receipts
+  layer (#1) — or it flatlines exactly the way Aeon's does.
 - The KOL "one banger carries the profile" dynamic (Movez 2.2M vs. typical single-
   digit-K) means **volume + a few real hits**, not every post landing. Don't read one
   viral post as a repeatable baseline.
 
 ---
 
-## §4 — Gaps / round two
+## §4 — Gaps / round three
 
-- **Capture the two seeds Adrian named:** **Aeon (`@aeon_agent`)** and **pmxt** —
-  missed this pass (collection ran out of runway). First adds.
+- ~~**Capture the two seeds Adrian named:** Aeon and pmxt.~~ **Done 2026-07-28** —
+  both are in §1 and §2. Aeon resolved to `@aeonframework` (X) rather than
+  `@aeon_agent` (its Telegram feed); "pmxt" resolved to PMX `@pmx_trade`.
+- **Aeon's Telegram Agent Feed itself is still uncaptured.** The three community
+  formats were borrowed from the *TG* feed, and what we now have is its *X* account —
+  a different feed with a different shape. If the shiplog/tweet-digest/feature-built
+  contracts are going to cite a source, the TG group is the one to screenshot.
 - **KOL pool depth:** we deep-covered 4 of the KOL outreach pool (Roan, Movez, Lunar,
   + Rekt Capital as a category exemplar). The rest of the pool is in
   [`kol-outreach-pool.md`](kol-outreach-pool.md) — pull the next strongest posters.
 - **Trading-bot builders** are thin here (Bankr only). Worth 1–2 more.
-- Numbers are a 2026-07-24 snapshot; re-capture if we cite them externally.
+- Numbers are a 2026-07-24 snapshot (2026-07-28 for Aeon and PMX); re-capture if we
+  cite them externally.

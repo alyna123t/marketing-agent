@@ -4,6 +4,26 @@ Every skill follows [`_SKILL_TEMPLATE.md`](_SKILL_TEMPLATE.md). Build order is
 Phase 1 first (see PRD §6). Change rationale in
 [`../../docs/specs/2026-07-24-skill-set-review.md`](../../docs/specs/2026-07-24-skill-set-review.md).
 
+## Community feed (current phase — the 2026-07-24 pivot)
+The three formats the team chose, borrowed from Aeon's Agent Feed. These are what's
+in active use; the X-phase table below is deferred behind them.
+
+| Skill | Group | Status |
+| --- | --- | --- |
+| `format-weekly-shiplog` | Make | **built + tested** (2026-07-28) — ships + the week's receipts layer; a ships-only shiplog is the Aeon flatline (`research/x-account-audit.md` §3 caution 2) |
+| `format-tweet-digest` | Make | **built + tested** (2026-07-28) — every item carries our line; a bare relay is cut, not shortened |
+| `format-feature-built` | Make | **built + tested** (2026-07-28) — one ship deep; the trade-off, the rejected alternative, and what still isn't true |
+
+All three: single fixed audience, no `brand-voice-guard` (voice is team-owned per the
+pivot), evidence map required, worth-posting gate can end in "no post."
+Test method and fixtures: [`../../test-fixtures/README.md`](../../test-fixtures/README.md).
+
+**Open — needs Alyna/Adrian:** the ship source and the tweet-capture pipeline don't
+exist yet. Each skill names its assumption in a `SOURCE ASSUMPTION` block and runs
+against `test-fixtures/` until they're wired. Only the Inputs sections change.
+
+## X phase (deferred)
+
 | Skill | Group | Phase | Status |
 | --- | --- | --- | --- |
 | `weekly-data-drop-builder` | Sense/Data | 1 | contract drafted |
@@ -25,9 +45,10 @@ Phase 1 first (see PRD §6). Change rationale in
 ## Knowledge files (read by skills — not skills themselves)
 | File | Read by | Status |
 | --- | --- | --- |
-| `shared-knowledge/marketing/brand-voice.md` | `brand-voice-guard` | drafted |
-| `shared-knowledge/marketing/platform-guidelines.md` | all `format-*` / `repurpose-*` | drafted |
-| `shared-knowledge/marketing/audiences.md` | all `format-*` | drafted |
+| `shared-knowledge/marketing/brand-voice.md` | `brand-voice-guard` | drafted — **not read by the community-feed skills**; voice is team-owned per the pivot |
+| `shared-knowledge/marketing/platform-guidelines.md` | all `format-*` / `repurpose-*` | drafted — now carries the **Community feed** section (audience, register, no-CTA default) |
+| `shared-knowledge/marketing/audiences.md` | X-phase `format-*` | drafted — the four-audience picker does not apply on the community feed, which has one audience by construction |
+| `shared-knowledge/marketing/research/x-account-audit.md` | `format-tweet-digest` (§1 watchlist), `format-weekly-shiplog` (§3 the flatline finding) | 10 accounts, two rounds |
 | `shared-knowledge/marketing/content-calendar.md` | `weekly-signal-intake`, `publish-tier-router` | drafted — 4-pillar rotation + the **worth-posting gate** (calendar is a ceiling, not a quota; no post ships without something real to say) |
 
 **Folded:** `audience-angle-selector` is no longer a standalone skill — it's a
