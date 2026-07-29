@@ -18,9 +18,9 @@ All three: single fixed audience, no `brand-voice-guard` (voice is team-owned pe
 pivot), evidence map required, worth-posting gate can end in "no post."
 Test method and fixtures: [`../../test-fixtures/README.md`](../../test-fixtures/README.md).
 
-**Open — needs Alyna/Adrian:** the ship source and the tweet-capture pipeline don't
-exist yet. Each skill names its assumption in a `SOURCE ASSUMPTION` block and runs
-against `test-fixtures/` until they're wired. Only the Inputs sections change.
+**Sources (v1):** manual weekly intake — `shared-knowledge/marketing/intake/` (see its
+README). Automated ship/tweet sources are deliberately deferred; when one lands, only
+each skill's Inputs section changes. Only the Inputs sections change.
 
 ## X phase (deferred)
 

@@ -2,34 +2,48 @@
 
 *Extends Aeon. Not a new runtime, not a new agent per channel.*
 
+**Current phase: internal community feed** (pivot, 2026-07-24). The X/LinkedIn plan
+in the PRD is deferred behind it; those rows below are marked deferred, not deleted.
+
 | Field | Value |
 | --- | --- |
-| Role | Marketing — turn trading data + intel into publishable content |
-| Runtime | Claude Code on GitHub Actions, scheduled (same as Aeon) |
-| Model | Sonnet 4.6 (July 2026 snapshot; retune as cost/capability shift) |
-| Coordination | Paperclip only. A content idea is an issue, never a chat. |
+| Role | Turn the week's ships, results, and watchlist intel into community-feed drafts |
+| Runtime | Claude Code on GitHub Actions, scheduled (`.github/workflows/marketing-agent.yml`) |
+| Model | claude-sonnet-5 (skills were GREEN-tested on Sonnet-class; retune as cost/capability shift) |
+| Coordination | `drafts/community-feed/` is the review queue until Paperclip is wired |
 | Knowledge | reads/writes `shared-knowledge/marketing/`; reads `intel/`, `patterns/` |
 
 ## Tool access (matrix, not free-for-all)
 
 | Tool | Access | Notes |
 | --- | --- | --- |
-| QMD (wiki search) | read | Sense stage runs over wiki + intel |
-| Weekly trade artifact | read | Source for the data drop |
-| Paperclip | read/write | Files opportunity + draft issues |
-| X / LinkedIn (MCP) | **draft-only, weeks 1–6** | Tier-gated; no autonomous posting during MVP |
-| UTM/link tooling | write | Tags published links for attribution |
+| `shared-knowledge/marketing/intake/` | read | The only source of ships and tweets (v1 = human paste; see `intake/README.md`) |
+| `drafts/community-feed/` | write | Drafts + blocked notes + gate-failure logs land here |
+| Weekly trade artifact / `data-drops/` | read | The receipts layer of the shiplog |
+| Web / X fetching | **none** | Missing intake is a blocked note, never a scrape |
+| Community feed posting | **none** | Draft-only; a human does the final paste |
+| X / LinkedIn (MCP) | *deferred* | Returns with the X phase, tier-gated per PRD §5 |
+| Paperclip | *not wired* | The drafts folder stands in; swap when wired |
+| UTM/link tooling | *deferred* | X-phase; community-feed posts carry no CTA by default |
 
 ## Operating rules
 
 - Add skills, not agents. Every format is a skill file.
-- No claim ships without an evidence map (`claim-evidence-linter`).
-- Strategy before volume: pause before inventing positioning or fanning one
-  idea into ten shallow posts.
-- Respect the publish tiers (see PRD §5). Kill condition: Tier-2 queue > 14 days
-  in the first 6 weeks → revert to manual.
+- No claim ships without an evidence map (`claim-evidence-linter` discipline — currently
+  enforced inline by each skill, no standalone linter).
+- **Brand voice is team-owned** (pivot 2026-07-24): do not run `brand-voice-guard` or
+  restyle for voice on community-feed drafts.
+- The worth-posting gate can end in "no post." Log it and stop; never pad.
+- Missing intake → blocked note, stop. Never substitute a source.
+- Kill condition: anything in `drafts/community-feed/` unreviewed > 14 days in the
+  first 6 weeks → revert to manual.
 
-## Schedule (proposed)
+## Schedule
 
-- **Weekly:** build data drop → sense opportunities → draft receipts post → route to tier.
+- **Weekly (Mon 09:00 UTC):** read `intake/YYYY-WW-ships.md` + `intake/YYYY-WW-tweets.md`
+  and the week's data drop → run `format-weekly-shiplog` and `format-tweet-digest` →
+  drafts to `drafts/community-feed/`.
+- **On demand (`workflow_dispatch`):** `format-feature-built` when a ship earns a
+  deep-dive and someone has pasted its source into `intake/features/`.
 - **Monthly:** `monthly-content-retro` — prune losers, promote winners to `patterns/`.
+  *(Not yet written; reads the rejected/posted split in the drafts folder.)*

@@ -19,12 +19,11 @@ Core principle: **ships alone flatline.** Aeon runs a pure ship-as-post feed to 
 - **Format:** `shared-knowledge/marketing/platform-guidelines.md` → *Community feed*.
 - **Gate:** `shared-knowledge/marketing/content-calendar.md` → *worth-posting gate*.
 
-> **SOURCE ASSUMPTION (unconfirmed — Alyna/Adrian to settle):** the ship source is
-> assumed to be merged PRs + closed Paperclip issues for the window. Until it's wired,
-> work against `test-fixtures/ship-logs/YYYY-WW-ships.md`. If the real source turns out
-> to be a changelog or release notes, only this Inputs section changes — the recipe holds.
+> **Source (v1 — manual intake):** `shared-knowledge/marketing/intake/YYYY-WW-ships.md`,
+> pasted weekly by the team (`intake/README.md`). When an automated source is wired
+> (merged PRs, a changelog), only this Inputs section changes — the recipe holds.
 
-Missing data drop → see Failure handling. Missing ship source → do not draft.
+Missing data drop → see Failure handling. Missing intake file → do not draft; write a blocked note (see Failure handling).
 
 ## The post's shape (recipe — follow in order)
 
@@ -64,7 +63,7 @@ Claim→evidence map:
   - <claim> → <source file>:<line or PR/issue id>
 Gate: <passed | "no post — nothing cleared the gate" + reason>
 ```
-*Paperclip isn't wired to this repo yet — until it is, return the draft as your response rather than filing it.*
+*Paperclip isn't wired yet — write the draft (full schema, not just the body) to `drafts/community-feed/YYYY-WW-shiplog.md`; that folder is the review queue (see its README).*
 
 ## Quality gates
 - Line 1 is an outcome or a user-facing change — not "this week we shipped."
@@ -102,7 +101,7 @@ Why it works: the loss is the lead, the anchor ship is the answer to it, every n
 - **Reporting the calendar.** "The flag we announced last week flipped on schedule" is not news, it's the absence of news. If it's the only thing you have, you don't have a post.
 
 ## Failure handling
-Missing data drop → do not publish a ships-only post; draft it, annotate `blocked: no data drop for YYYY-WW`, route for human review. Missing/empty ship source → file a Paperclip issue, do not draft. Failed gate → log the gate line and stop; never auto-clear.
+Missing data drop → do not publish a ships-only post; draft it, annotate `blocked: no data drop for YYYY-WW`, route for human review. Missing/empty intake file → do not draft; write `Blocked: no ship intake for YYYY-WW` to `drafts/community-feed/YYYY-WW-shiplog.md` and stop — never scrape a substitute source. Failed gate → log the gate line and stop; never auto-clear.
 
 ## Escalation
 **Tier 2 is the normal outcome** (Alyna review, < 24h) — a shiplog reporting merged work on the internal feed stays at Tier 2 even when it reports a loss, quotes a backtest, or names a date already fixed in the repo. Escalate to Tier 3 (Adrian) only when the post itself carries new risk: a breaking change, a default trading-behavior change not yet announced anywhere, or a commitment the source doesn't already contain.

@@ -20,9 +20,10 @@ Second principle, from the RED baseline: **the temptation in this format is to b
 - **Format:** `shared-knowledge/marketing/platform-guidelines.md` → *Community feed*.
 - **Gate:** `shared-knowledge/marketing/content-calendar.md` → *worth-posting gate*.
 
-> **SOURCE ASSUMPTION (unconfirmed — Alyna/Adrian to settle):** assumed to be the merged
-> PR plus its thread. Until wired, work against `test-fixtures/features/*.md`. If design
-> discussion lives somewhere other than the PR thread, only this section changes.
+> **Source (v1 — manual intake):** `shared-knowledge/marketing/intake/features/<pr-id>-<slug>.md`
+> — the PR body, thread discussion (verbatim, with names), linked issue, and any backtest,
+> pasted by whoever requests the deep-dive (`intake/README.md`). If design discussion
+> lives somewhere other than the PR thread, only this section changes.
 
 **A feature with no design discussion and no measurement is not a deep-dive candidate** — it's a shiplog line. See Failure handling.
 
@@ -57,7 +58,7 @@ Claim→evidence map:
 Reader actions asserted: <action> → <source line proving it exists>   (or "none")
 Gate: <passed | "no post — nothing cleared the gate" + reason>
 ```
-*Paperclip isn't wired to this repo yet — until it is, return the draft as your response rather than filing it.*
+*Paperclip isn't wired yet — write the draft (full schema, not just the body) to `drafts/community-feed/YYYY-WW-feature-<slug>.md`; that folder is the review queue (see its README).*
 
 ## Quality gates
 - Line 1 is a capability or a failure — not "this week we shipped."

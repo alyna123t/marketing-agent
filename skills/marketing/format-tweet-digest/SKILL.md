@@ -19,10 +19,9 @@ Core principle: **every item carries our line.** The value we add is the thing o
 - **Format:** `shared-knowledge/marketing/platform-guidelines.md` → *Community feed*.
 - **Gate:** `shared-knowledge/marketing/content-calendar.md` → *worth-posting gate*.
 
-> **SOURCE ASSUMPTION (unconfirmed — Alyna/Adrian to settle):** captures are assumed to
-> come from a weekly pull over the §1 watchlist. No capture pipeline exists yet. Until
-> it's wired, work against `test-fixtures/tweet-captures/YYYY-WW-captures.md`. Only this
-> Inputs section changes when the real pipeline lands.
+> **Source (v1 — manual intake):** `shared-knowledge/marketing/intake/YYYY-WW-tweets.md`,
+> pasted weekly by the team from the §1 watchlist (`intake/README.md`). When a capture
+> pipeline is wired, only this Inputs section changes.
 
 ## The post's shape (recipe — follow in order)
 
@@ -65,7 +64,7 @@ Claim→evidence map:
   - <our line> → <source file>:<line or PR/issue id>
 Gate: <passed | "no post — nothing cleared the gate" + reason>
 ```
-*Paperclip isn't wired to this repo yet — until it is, return the draft as your response rather than filing it.*
+*Paperclip isn't wired yet — write the draft (full schema, not just the body) to `drafts/community-feed/YYYY-WW-digest.md`; that folder is the review queue (see its README).*
 
 ## Quality gates
 - Every item has our line. **Zero bare relays.**
@@ -103,7 +102,7 @@ Why it works: four items, each carrying our number or our ship; the rumor is lab
 - **Quoting our own numbers from memory.** Our line needs an evidence-map entry too.
 
 ## Failure handling
-Missing captures → file a Paperclip issue, do not draft. Missing data drop/ship source → draft only the items whose lines don't depend on them; if that drops the count below three, log the gate failure. Failed gate → log and stop; never auto-clear.
+Missing captures → do not draft; write `Blocked: no tweet intake for YYYY-WW` to `drafts/community-feed/YYYY-WW-digest.md` and stop — never pull tweets yourself. Missing data drop/ship source → draft only the items whose lines don't depend on them; if that drops the count below three, log the gate failure. Failed gate → log and stop; never auto-clear.
 
 ## Escalation
 **Tier 2 is the normal outcome** (Alyna review, < 24h) — including items that mention competitors neutrally or report our own bad week. Escalate to Tier 3 (Adrian) if an item criticises a named competitor, touches a partnership or anything commercial, or repeats a rumor about **a venue we route trades to or a named partner** (Polymarket and Kalshi both count — a rumor about a venue holding user money is Adrian's call, not a judgment call).
