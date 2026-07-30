@@ -406,8 +406,8 @@ a **new X format** for when we get there.
   a different feed with a different shape. If the shiplog/tweet-digest/feature-built
   contracts are going to cite a source, the TG group is the one to screenshot.
 - **KOL pool depth:** we deep-covered 4 of the KOL outreach pool (Roan, Movez, Lunar,
-  + Rekt Capital as a category exemplar). The rest of the pool is in
-  [`kol-outreach-pool.md`](kol-outreach-pool.md) — pull the next strongest posters.
+  + Rekt Capital as a category exemplar). The rest of the pool is kept off-repo
+  (ask Alyna); pull the next strongest posters from it.
 - **Trading-bot builders** are thin here (Bankr only). Worth 1–2 more.
 - Numbers are a 2026-07-24 snapshot (2026-07-28 for Aeon and PMX); re-capture if we
   cite them externally.

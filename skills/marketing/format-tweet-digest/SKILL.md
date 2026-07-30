@@ -14,7 +14,7 @@ Core principle: **every item carries our line.** The value we add is the thing o
 ## Inputs
 
 - **Captures:** the week's tweets from the watchlist.
-- **Watchlist:** `shared-knowledge/marketing/research/x-account-audit.md` §1 (the ten audited accounts). `research/kol-outreach-pool.md` is a candidate list for *widening* the capture pull, not a source of captures — it matters when captures are being collected, not when the digest is being written.
+- **Watchlist:** `shared-knowledge/marketing/research/x-account-audit.md` §1 (the ten audited accounts). The KOL outreach pool (kept off-repo; ask Alyna) is a candidate list for *widening* the capture pull, not a source of captures. It matters when captures are being collected, not when the digest is being written.
 - **Our side:** the same week's data drop (`shared-knowledge/marketing/data-drops/YYYY-WW.md`) and ship source — needed to write our line on the items that touch us.
 - **Format:** `shared-knowledge/marketing/platform-guidelines.md` → *Community feed*.
 - **Gate:** `shared-knowledge/marketing/content-calendar.md` → *worth-posting gate*.

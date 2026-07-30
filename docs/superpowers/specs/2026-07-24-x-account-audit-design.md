@@ -101,8 +101,8 @@ Reversible edits recording the direction change:
 - **Record the direction** in `docs/specs/2026-07-24-community-feed-pivot.md`:
   community feed first → then X; the three chosen formats; brand-voice now
   team-owned.
-- **Save the KOL outreach pool** to
-  `shared-knowledge/marketing/research/kol-outreach-pool.md`.
+- **Save the KOL outreach pool** off-repo (this repo is public and the pool names
+  outreach targets; Alyna holds the file).
 
 ## Out of scope
 
