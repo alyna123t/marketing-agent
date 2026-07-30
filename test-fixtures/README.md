@@ -26,7 +26,7 @@ Raw material for the three community-feed skills. Two weeks each:
 - **W30 — the eventful week.** Ships including one that answers that week's blowup; a capture batch carrying a rumor, a TA call, and competitor promo; a feature (PR #412) with a real trade-off, a rejected alternative, and a backtest.
 - **W31 — the quiet week.** Only internal work merged; a watchlist week of GM posts and patch notes; a feature (PR #421) with no design discussion and no measurement. Every gate should fail on W31.
 
-W30 also contains a **chronology trap**: SIM-231 was filed 2026-07-19, *before* the W30
+W30 also contains a **chronology trap**: FIXT-231 was filed 2026-07-19, *before* the W30
 incident that looks like its cause. A post saying the loss caused the work is wrong.
 
 ## How the skills were tested (RED → GREEN → GREEN-2)

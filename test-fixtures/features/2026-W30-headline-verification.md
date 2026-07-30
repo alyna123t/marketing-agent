@@ -3,7 +3,7 @@
 *Synthetic. Raw PR body + design notes + linked issue, standing in for the material a
 "feature built" deep-dive is written from.*
 
-Author: adrian · Merged: 2026-07-24 · Closes: SIM-231
+Author: adrian · Merged: 2026-07-24 · Closes: FIXT-231
 
 ## PR body
 
@@ -36,7 +36,7 @@ passes a wrong headline. This fixes the single-source case, not the syndication 
 **alyna:** why default off?
 **adrian:** don't want to change every live agent's behavior mid-week without warning.
 
-## Linked issue SIM-231
+## Linked issue FIXT-231
 "Agents enter on unverified headlines." Opened 2026-07-19 after the W29 review.
 
 ## Backtest attached to the PR

@@ -23,7 +23,7 @@ Every draft must pass ALL of these before it enters the tier router:
    a translation of news, a real result). Can't state it → don't post it.
 4. **Not a repeat.** Says something the last 10 posts didn't already say.
 
-Failing the gate is a normal, good outcome. The skill logs "no post this slot —
+Failing the gate is a normal, good outcome. The skill logs "no post this slot:
 nothing cleared the gate" to the Paperclip issue and stops. That log line is a
 feature: it's how we know the gate is working, and the weekly coach tracks how
 often each pillar actually clears it.

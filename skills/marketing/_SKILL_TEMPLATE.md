@@ -2,7 +2,7 @@
 
 *The contract every marketing skill follows. Copy this file into a new skill
 folder as `SKILL.md` and fill every section. The contract is what keeps agent
-output predictable — do not leave a section blank.*
+output predictable. Do not leave a section blank.*
 
 ## Trigger
 When this skill should be loaded/run. Be specific (a schedule, an issue label,
@@ -17,7 +17,7 @@ Ordered steps the agent follows. One action per line. Include the required
 "pause" steps (e.g. confirm audience before drafting).
 
 ## Output schema
-The exact shape of what this skill produces — markdown structure and/or JSON
+The exact shape of what this skill produces: markdown structure and/or JSON
 sidecar fields. Downstream skills depend on this being stable.
 
 ## Quality gates
